@@ -4,14 +4,32 @@ function MiembroSquad(nombre, edad, hobbies){
     this.hobbies = hobbies;
 	}
 
-	var carolina = new MiembroSquad("Carolina Quintana", 31 , "Patinar, Comer sushi, Acariciar a sus gatas");
-	var muriel = new MiembroSquad("Muriel Bahamondes", 25, "Fumar hierba, Jugar pool, Navegar en internet" );
-	var anayn = new MiembroSquad("Anayn Pavez", 27, "Dibujar, Pastelear, Andar en bici");
-	var josefa = new MiembroSquad("Josefa Herrera", 21, "Bailar Pop, Ver series, Codear");
-	var anais = new MiembroSquad("Anais Araya", 19, "Estar con la amelia, Ver Netflix , Estar con su pareja");
-	var maibeet = new MiembroSquad("Maibeet Torres", 15, "Jugar juegos de RPG, Leer, dormir");
+var arr = [];
+	var carolina = new MiembroSquad("Carolina Quintana", 31 , ["Patinar", "Comer sushi", "Acariciar a sus gatas"]);
+		arr.push(carolina);
+	var muriel = new MiembroSquad("Muriel Bahamondes", 25, ["Fumar hierba", "Jugar pool", "Navegar en internet"]);
+		arr.push(muriel);
+	var anayn = new MiembroSquad("Anayn Pavez", 27, ["Dibujar", "Pastelear", "Andar en bici"]);
+		arr.push(anayn);
+	var josefa = new MiembroSquad("Josefa Herrera", 21, ["Bailar Pop", "Ver series", "Codear"]);
+		arr.push(josefa);
+	var anais = new MiembroSquad("Anais Araya", 19, ["Estar con la amelia", "Ver Netflix" , "Estar con su pareja"]);
+		arr.push(anais);
+	var maibeet = new MiembroSquad("Maibeet Torres", 15, ["Jugar juegos de RPG", "Leer", "dormir"]);
+		arr.push(maibeet);
 
-var Carol = document.getElementById("caro");
+	arr.forEach(function(ele){
+		innerHTML("nombre: " + ele.nombre + "edad: " + ele.edad);
+		
+		ele.hobbies.forEach(function(e){
+			innerHTML("hobbies: " + e);
+		})
+		
+	})
+
+
+
+/*var Carol = document.getElementById("caro");
 caro.innerHTML = "<strong>Nombre:</strong> " + carolina.nombre + "<strong><br>Edad:</strong> " + carolina.edad + "<strong><br>Hobbies:</strong> " + carolina.hobbies;
 var Murie = document.getElementById("muri");
 muri.innerHTML = "<strong>Nombre:</strong> " + muriel.nombre + "<strong><br>Edad:</strong> " + muriel.edad + "<strong><br>Hobbies:</strong> " + muriel.hobbies;
