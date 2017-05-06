@@ -1,0 +1,15 @@
+body{
+    font-family: Helvetica;
+    color: #424242;
+    background-color: #E8F8F5;
+ }
+h2{
+    color:#2471A3;
+}
+.container{
+	width:600px;
+	margin:0 auto;
+}
+.columna1{
+	width:300px;
+	float:left;}
